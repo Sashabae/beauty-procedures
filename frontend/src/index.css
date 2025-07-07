@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: winter --default;
+}
+
+body {
+  font-family: cursive;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.label-style {
+  @apply block text-sm font-medium
+}
+.input-style {
+  @apply mt-1 w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white;
+}
+.submit-button {
+  @apply w-full py-2 mt-4 btn-primary font-semibold rounded-md border hover:border-blue-300 transition duration-300 btn;
+}
+
