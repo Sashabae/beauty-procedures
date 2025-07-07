@@ -71,6 +71,9 @@ export default function CreateService({ onClose }) {
       });
 
       alert("Service created successfully!");
+      onClose();
+      window.location.reload();
+
       // console.log("Service created:", response.data.data);
 
       setServiceData({
@@ -81,7 +84,6 @@ export default function CreateService({ onClose }) {
         duration: "",
         image: null,
       });
-      onClose();
     } catch (err) {
       console.error("Error creating service:", err.response || err);
       setError(
