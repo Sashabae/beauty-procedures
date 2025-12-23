@@ -47,6 +47,7 @@ This project is a full-stack web application for managing procedures. The platfo
 ### Environment Variables
 
 There's a file `env-example` in both `backend` and `frontend` folders, which show everything you'll need for `.env`
+And a read.me file in backend folder for creating tables
 
 ### Frontend
 
