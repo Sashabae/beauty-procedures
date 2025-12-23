@@ -5,6 +5,8 @@ import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router";
 
+import bgImage from "../assets/beauty-surgery.jpg";
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Login() {
@@ -49,7 +51,12 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div
+      className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-6 p-8 bg-base-200 rounded-lg shadow-lg w-full sm:w-96 border border-blue-600"

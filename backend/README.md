@@ -1,4 +1,5 @@
 # Creating .env
+
 The env variables you will need are located in the env-example file
 
 # Creating the tables in pgAdmin:
@@ -14,8 +15,8 @@ CREATE TABLE users (
 
 CREATE TABLE services (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL, 
-    category VARCHAR(20) CHECK (category IN ('tanning', 'massage', 'waxing', 'facials')) NOT NULL, 
+    name VARCHAR(255) NOT NULL,
+    category VARCHAR(20) CHECK (category IN ('tanning', 'massage', 'waxing', 'facials')) NOT NULL,
     image TEXT,
     description TEXT,
     duration INT NOT NULL       -- Stores duration in minutes

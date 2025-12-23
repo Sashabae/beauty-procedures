@@ -82,11 +82,17 @@ export default function ServiceList({ category }) {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-        {services.map((service) => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
-      </div>
+      {services.length === 0 ? (
+        <div className="text-center text-gray-500 text-lg">
+          No services available
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+      )}
 
       {/* Pagination */}
       <div className="flex justify-center gap-4 mt-6">
